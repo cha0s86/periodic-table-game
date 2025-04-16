@@ -45,19 +45,19 @@ int main() {
         srand(gen());
         int randomelement = rand() % 117;
 
-        std::string element = data[randomelement][0];
+        std::string element = data[randomelement][1];
 
         // Variable for input
         std::string write;
 
-        std::cout << "Element number: " << data[randomelement][1] << ": ";
+        std::cout << "Element number for " << data[randomelement][1] << " (" << data[randomelement][2] << "): ";
 
         std::cin >> write;
         if (write == element) {
             std::cout << "Correct! You scored a point!" << std::endl;
             score++;
         } else {
-            std::cout << "Incorrect! Your score was: " << score << std::endl;
+            std::cout << "Incorrect! Your score was: " << score << "!" << std::endl;
             return 0;
         }
     }
