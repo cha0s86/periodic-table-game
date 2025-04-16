@@ -45,7 +45,7 @@ int main() {
         srand(gen());
         int randomelement = rand() % 117;
 
-        std::string element = data[randomelement][1];
+        std::string element = data[randomelement][0];
 
         // Variable for input
         std::string write;
@@ -53,7 +53,7 @@ int main() {
         std::cout << "Atomic number for " << data[randomelement][1] << " (" << data[randomelement][2] << "): ";
 
         std::cin >> write;
-        if (write == element) {
+        if (write == ) {
             std::cout << "Correct! You scored a point!" << std::endl;
             score++;
         } else {
