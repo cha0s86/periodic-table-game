@@ -48,15 +48,17 @@ int main() {
         std::string element = data[randomelement][0];
 
         // Variable for input
-        std::wstring write;
+        std::string write;
 
-        std::wcout << "Element " << element << ": ";
+        std::cout << "Element number: " << data[randomelement][1] << ": ";
 
-        std::wcin >> write;
+        std::cin >> write;
         if (write == element) {
-            std::wcout << "Correct!" << std::endl;
+            std::cout << "Correct! You scored a point!" << std::endl;
             score++;
-            std::wcout << "--------------------------" << std::endl;
+        } else {
+            std::cout << "Incorrect! Your score was: " << score << std::endl;
+            return 0;
         }
     }
 
