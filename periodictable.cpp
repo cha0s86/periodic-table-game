@@ -50,7 +50,7 @@ int main() {
         // Variable for input
         std::string write;
 
-        std::cout << "Element number for " << data[randomelement][1] << " (" << data[randomelement][2] << "): ";
+        std::cout << "Atomic number for " << data[randomelement][1] << " (" << data[randomelement][2] << "): ";
 
         std::cin >> write;
         if (write == element) {
