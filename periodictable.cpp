@@ -13,7 +13,7 @@ int main() {
     periodictable.open("periodictable.csv");
 
     std::vector<std::vector<std::string>> data;
-    
+
     std::string line;
     while (std::getline(periodictable, line)) {
         std::vector<std::string> row;
@@ -33,9 +33,9 @@ int main() {
 
     int score = 0;
 
-    while (running) {
+    bool again;
 
-        bool again;
+    while (running) {
 
         again = false;
 
@@ -49,16 +49,31 @@ int main() {
 
         // Variable for input
         std::string write;
+        std::string userinput;
 
         std::cout << "Atomic number for " << data[randomelement][1] << " (" << data[randomelement][2] << "): ";
 
         std::cin >> write;
-        if (write == ) {
+        if (write == data[randomelement][0]) {
             std::cout << "Correct! You scored a point!" << std::endl;
             score++;
-        } else {
+        }
+        else {
             std::cout << "Incorrect! Your score was: " << score << "!" << std::endl;
-            return 0;
+            while (again == false) {
+                std::cout << "Do you want to play again? (yes/no): ";
+                std::cin >> userinput;
+                if (userinput == "yes") {
+                    again = true;
+                }
+                else if (userinput == "no") {
+                    again = false;
+                    return 0;
+                }
+                else {
+                    std::cout << "I didn't understand that..." << std::endl;
+                }
+            }
         }
     }
 
